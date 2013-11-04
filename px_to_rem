@@ -1,0 +1,6 @@
+#! /usr/bin/env node
+
+var px_to_rem = require('./index.js');
+var args = process.argv.slice(2);
+
+px_to_rem.convert(args);
