@@ -19,8 +19,8 @@ function convert(msg) {
     // pull out the px units and replace with rem units
     processed_data = raw_data.replace(regexPattern, parseString);  
 
- 		fs.writeFile('./style_new.css', processed_data, function() {
-			console.log("Party Onward with rem units :)");
+    fs.writeFile('./style_new.css', processed_data, function() {
+      console.log("Party Onward with rem units :)");
     }); 
   }); 
 }
