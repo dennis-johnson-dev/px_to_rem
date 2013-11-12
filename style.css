@@ -1,5 +1,17 @@
+html {
+  font-size: 100%; 
+}
+
+html {
+  font-size: 100%; 
+}
+
 body {
   font-size: 12px;
+}
+
+p {
+  font-size: 12em;
 }
 
 h1 {
