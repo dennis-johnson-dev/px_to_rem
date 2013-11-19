@@ -8,7 +8,8 @@
     "mocha": "*",
     "should": "*",
     "css-value": "*",
-    "css-parse": "*"
+    "css-parse": "*", 
+    "css-stringify": "*"
   },
   "description": "A simple script that will replace your font-size: px with font-size: rem units",
   "keywords" : [
