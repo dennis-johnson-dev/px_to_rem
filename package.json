@@ -4,7 +4,12 @@
 		"email": "dennis.ohnson@colorado.edu",
 		"url": "http://github.com/songawee"
   },
-  "dependencies": {},
+  "devDependencies": {
+    "mocha": "*",
+    "should": "*",
+    "css-value": "*",
+    "css-parse": "*"
+  },
   "description": "A simple script that will replace your font-size: px with font-size: rem units",
   "keywords" : [
     "rem",

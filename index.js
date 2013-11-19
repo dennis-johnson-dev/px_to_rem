@@ -1,4 +1,5 @@
 var fs = require('fs');
+var parse = require('./lib/css-parse');
 
 function parseString(match, css_style, amount, unit) {
   // Convert amount string to an integer, divide it by 10, and 
@@ -11,18 +12,9 @@ function parseString(match, css_style, amount, unit) {
 } 
 
 function findHTML(input) {
-  if (input.search("html") == -1) {
-    // html style was not found, need to add it 
-    var html_style = "html {\n  font-size: 62.5%;\n}\n\n";
-    input = html_style + input; 
-    return input; 
-  } else {
-    // testing new regex for html-font sizes
-    var matches = input.match(/(html)(.*)({\n)(.*)(font-size:)(.*)(\d+)/g);  
-    console.log(matches);
-
-    return input;
-  }
+    var parsed = parse.parse; 
+    console.log(parsed);
+    return parsed;
 }
 				 
 function convert(msg) {
@@ -33,7 +25,8 @@ function convert(msg) {
       }
 
       // add the html style to set root of font sizes
-			var raw_data = findHTML(data);
+      var data_holder = findHTML(data);
+			var raw_data = data;
 			var processed_data;
 			var regexPattern = /(font-size:) (\d+)(px)/gi; 
 
