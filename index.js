@@ -1,5 +1,6 @@
 var fs = require('fs');
-var parse = require('./lib/css-parse');
+var parse = require('css-parse');
+var value = require('css-value');
 
 function parseString(match, css_style, amount, unit) {
   // Convert amount string to an integer, divide it by 10, and 
@@ -11,12 +12,6 @@ function parseString(match, css_style, amount, unit) {
   return match + " " + amount + unit;
 } 
 
-function findHTML(input) {
-    var parsed = parse.parse; 
-    console.log(parsed);
-    return parsed;
-}
-				 
 function convert(msg) {
   fs.readFile('./' + msg, 'utf8', function (err, data) {
       if (err) { 
@@ -24,8 +19,9 @@ function convert(msg) {
         return err;
       }
 
+			console.log(typeof data);
+
       // add the html style to set root of font sizes
-      var data_holder = findHTML(data);
 			var raw_data = data;
 			var processed_data;
 			var regexPattern = /(font-size:) (\d+)(px)/gi; 
