@@ -22,5 +22,8 @@
 		"url": "https://github.com/songawee/px_to_rem",
     "type": "git"
   },
+  "scripts": {
+    "test": "make test"
+  },
   "version": "0.0.0"
 }

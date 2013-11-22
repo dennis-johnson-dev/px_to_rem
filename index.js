@@ -14,30 +14,39 @@ function parseString(match, css_style, amount, unit) {
 } 
 
 function HTML(input) {
-  var css = parse(input, {source: 'style.css'}); 
+  var css = parse(input); 
   // find html styles and check if font-size is a declaration  
+  for (rule in css.stylesheet) {
+    // console.log(css.stylesheet[rule]); 
+  }
   return css;
 }
 
 function convert(msg) {
-  fs.readFile('./' + msg, 'utf8', function (err, data) {
+  fs.readFile('./' + 'style.css', 'utf8', function (err, data) {
       if (err) { 
         console.log("File couldn't be found or opened");
+        console.log(err);
         return err;
       }
 
-			console.log(typeof data);
+      /*
       var html_data = HTML(data);
       var html_parsed = stringify(html_data);
       console.log(html_parsed);
+      console.log(data);
+      */
 
       // add the html style to set root of font sizes
 			var raw_data = data;
-			var processed_data;
+			var processed_data = "html {\n  font-size: 12px;\n}";
 			var regexPattern = /(font-size:) (\d+)(px)/gi; 
 
 			// pull out the px units and replace with rem units
+      /*
 			processed_data = raw_data.replace(regexPattern, parseString);  
+      */
+      return processed_data;
 
 			fs.writeFile('./style_new.css', processed_data, function(err) {
 				if (err) { 
@@ -46,7 +55,6 @@ function convert(msg) {
 				}
 				console.log("Party Onward with rem units :)");
 			}); 
-
   }); 
 }
 
