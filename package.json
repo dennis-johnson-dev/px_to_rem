@@ -9,7 +9,9 @@
     "should": "~2.1.0",
     "css-value": "*",
     "css-parse": "*",
-    "css-stringify": "*"
+    "css-stringify": "*", 
+    "chai": "*", 
+    "sinon": "*"
   },
   "description": "A simple script that will replace your font-size: px with font-size: rem units",
   "keywords": [

@@ -16,6 +16,7 @@ function parseString(match, css_style, amount, unit) {
 function HTML(input) {
   var css = parse(input); 
   // find html styles and check if font-size is a declaration  
+  // add if statement to determine if html is even in the sheet before parsing
   for (rule in css.stylesheet) {
     // console.log(css.stylesheet[rule]); 
   }
@@ -32,13 +33,11 @@ function convert(data) {
 
       // add the html style to set root of font sizes
 			var raw_data = data;
-			var processed_data = "html {\n  font-size: 12px;\n}";
-			var regexPattern = /(font-size:) (\d+)(px)/gi; 
+			var processed_data; 
+ 			var regexPattern = /(font-size:) (\d+)(px)/gi; 
 
 			// pull out the px units and replace with rem units
-      /*
 			processed_data = raw_data.replace(regexPattern, parseString);  
-      */
       return processed_data;
 }
 
