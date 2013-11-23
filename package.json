@@ -1,25 +1,25 @@
 {
   "author": {
-		"name": "Dennis Johnson",
-		"email": "dennis.ohnson@colorado.edu",
-		"url": "http://github.com/songawee"
+    "name": "Dennis Johnson",
+    "email": "dennis.ohnson@colorado.edu",
+    "url": "http://github.com/songawee"
   },
   "devDependencies": {
     "mocha": "*",
-    "should": "*",
+    "should": "~2.1.0",
     "css-value": "*",
-    "css-parse": "*", 
+    "css-parse": "*",
     "css-stringify": "*"
   },
   "description": "A simple script that will replace your font-size: px with font-size: rem units",
-  "keywords" : [
+  "keywords": [
     "rem",
     "css"
   ],
   "main": "px_to_rem",
   "name": "px_to_rem",
   "repository": {
-		"url": "https://github.com/songawee/px_to_rem",
+    "url": "https://github.com/songawee/px_to_rem",
     "type": "git"
   },
   "scripts": {

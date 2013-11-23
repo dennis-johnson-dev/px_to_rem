@@ -22,14 +22,7 @@ function HTML(input) {
   return css;
 }
 
-function convert(msg) {
-  fs.readFile('./' + 'style.css', 'utf8', function (err, data) {
-      if (err) { 
-        console.log("File couldn't be found or opened");
-        console.log(err);
-        return err;
-      }
-
+function convert(data) {
       /*
       var html_data = HTML(data);
       var html_parsed = stringify(html_data);
@@ -47,15 +40,6 @@ function convert(msg) {
 			processed_data = raw_data.replace(regexPattern, parseString);  
       */
       return processed_data;
-
-			fs.writeFile('./style_new.css', processed_data, function(err) {
-				if (err) { 
-					console.log("File couldn't be saved");
-					return err; 
-				}
-				console.log("Party Onward with rem units :)");
-			}); 
-  }); 
 }
 
 exports.convert = convert;

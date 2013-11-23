@@ -1,6 +1,25 @@
 #! /usr/bin/env node
 
 var px_to_rem = require('./index.js');
-var args = process.argv.slice(2);
+var args = process.argv.slice(2).toString().slice(0, -4);
+var fs = require('fs');
 
-px_to_rem.convert(args);
+fs.readFile('./' + args + '.css', 'utf8', function (err, data) {
+    if (err) { 
+      console.log(args + '.css' + " couldn't be found or opened");
+      // console.log(err);
+      return err;
+    }
+
+    var output = px_to_rem.convert(data); 
+  
+    fs.writeFile('./' + args + '_t.css', output, function(err) {
+      if (err) {
+        console.log("File couldn't be saved");
+        return err;
+      }      
+      console.log("Party onward with rem units :)");
+    });
+});
+
+
