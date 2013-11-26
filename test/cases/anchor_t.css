@@ -6,6 +6,7 @@ a {
   font-size: 1.2rem;
 }
 
-a, .class {
-  font-size: 10em; 
+a,
+.class {
+  font-size: 10em;
 }
