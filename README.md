@@ -1,7 +1,3 @@
-px_to_rem
-Dennis Johnson
-10/22/13
-
 <img src="https://travis-ci.org/songawee/px_to_rem.png?branch=master" />
 
 ## Px_to_REM
@@ -22,6 +18,7 @@ Dennis Johnson
 ## Command Line Tool
 
   Also included is a command line tool that takes a css file as an argument
+  (cwd = base folder of plugin)
   
 ````
   $ ./px_to_rem style.css
