@@ -1,8 +1,8 @@
 {
   "name": "px_to_rem",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Replace your font-size: in px with font-size: in rem units",
-  "author": "Dennis Johnson <dennis.ohnson@colorado.edu">,
+  "author": "Dennis Johnson <dennis.ohnson@colorado.edu>",
   "devDependencies": {
     "mocha": "*",
     "should": "~2.1.0",
