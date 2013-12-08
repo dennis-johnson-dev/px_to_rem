@@ -6,11 +6,13 @@
   "devDependencies": {
     "mocha": "*",
     "should": "~2.1.0",
-    "css-value": "*",
-    "css-parse": "*",
-    "css-stringify": "*", 
     "chai": "*", 
     "sinon": "*"
+  },
+  "Dependencies": {
+    "css-value": "*",
+    "css-parse": "*",
+    "css-stringify": "*"
   },
   "keywords": [
     "rem",
