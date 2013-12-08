@@ -1,5 +1,11 @@
 <img src="https://travis-ci.org/songawee/px_to_rem.png?branch=master" />
 
+## Installation
+
+````
+  $ npm install px_to_rem 
+````
+
 ## Px_to_REM
 
   Utility for converting font-size css styles using px units to rem

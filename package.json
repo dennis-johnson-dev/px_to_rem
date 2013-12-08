@@ -13,12 +13,13 @@
     "chai": "*", 
     "sinon": "*"
   },
-  "description": "A simple script that will replace your font-size: px with font-size: rem units",
+  "description": "Replace your font-size: in px with font-size: in rem units",
   "keywords": [
     "rem",
+    "px",
     "css"
   ],
-  "main": "px_to_rem",
+  "main": "index",
   "name": "px_to_rem",
   "repository": {
     "url": "https://github.com/songawee/px_to_rem",
@@ -27,5 +28,5 @@
   "scripts": {
     "test": "make test"
   },
-  "version": "0.1"
+  "version": "0.0.0"
 }
