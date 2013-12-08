@@ -7,6 +7,8 @@
     "mocha": "*",
     "should": "~2.1.0",
     "css-value": "*",
+    "css-parse": "*",
+    "css-stringify": "*",
     "chai": "*", 
     "sinon": "*"
   },
