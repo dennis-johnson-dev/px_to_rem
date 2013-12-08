@@ -1,13 +1,25 @@
-px_to_rem
-Dennis Johnson
-10/22/13
-
 <img src="https://travis-ci.org/songawee/px_to_rem.png?branch=master" />
 
-Utility for converting font-size css styles using px units to rem
--> Parses style.css (or possibly any stylesheet you input)
--> Outputs a new style.css with rem units
+## Px_to_REM
 
-Requirements:
--> font-size style must be in 'font-size: 12px;' format (spacing !important)
--> If there is a font-size style for the html selector, this will overwrite
+  Utility for converting font-size css styles using px units to rem
+
+## Usage
+
+````javascript
+  var px_to_rem = require('px_to_rem');
+  var css = "h1 { \n font-size: 12px;\n }";
+  
+  var output = px_to_rem.convert(css);
+  
+  console.log(output);
+````
+
+## Command Line Tool
+
+  Also included is a command line tool that takes a css file as an argument
+  (cwd = base folder of plugin)
+  
+````
+  $ ./px_to_rem style.css
+````
